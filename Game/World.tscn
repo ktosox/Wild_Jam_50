@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Cardboard.tscn" type="PackedScene" id=1]
 
 [node name="World" type="Node2D"]
 
@@ -8,7 +8,50 @@
 current = true
 zoom = Vector2( 4, 4 )
 
-[node name="Icon" type="Sprite" parent="."]
-position = Vector2( -136, 365 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+[node name="Cardboard" parent="." instance=ExtResource( 1 )]
+margin_left = 675.0
+margin_top = 729.0
+margin_right = 675.0
+margin_bottom = 729.0
+
+[node name="Cardboard2" parent="." instance=ExtResource( 1 )]
+margin_left = 680.0
+margin_top = 125.0
+margin_right = 680.0
+margin_bottom = 125.0
+
+[node name="Cardboard3" parent="." instance=ExtResource( 1 )]
+margin_left = 1088.0
+margin_top = 125.0
+margin_right = 1088.0
+margin_bottom = 125.0
+
+[node name="Cardboard4" parent="." instance=ExtResource( 1 )]
+margin_left = 1089.0
+margin_top = 729.0
+margin_right = 1089.0
+margin_bottom = 729.0
+
+[node name="Cardboard5" parent="." instance=ExtResource( 1 )]
+margin_left = -1864.0
+margin_top = -346.0
+margin_right = -1864.0
+margin_bottom = -346.0
+
+[node name="Cardboard6" parent="." instance=ExtResource( 1 )]
+margin_left = -1859.0
+margin_top = -950.0
+margin_right = -1859.0
+margin_bottom = -950.0
+
+[node name="Cardboard7" parent="." instance=ExtResource( 1 )]
+margin_left = -1451.0
+margin_top = -950.0
+margin_right = -1451.0
+margin_bottom = -950.0
+
+[node name="Cardboard8" parent="." instance=ExtResource( 1 )]
+margin_left = -1450.0
+margin_top = -346.0
+margin_right = -1450.0
+margin_bottom = -346.0
