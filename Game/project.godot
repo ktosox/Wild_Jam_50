@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Cardboard",
 "language": "GDScript",
 "path": "res://Objects/Cardboard.gd"
+}, {
+"base": "Resource",
+"class": "ObjectData",
+"language": "GDScript",
+"path": "res://Objects/object_data.gd"
 } ]
 _global_script_class_icons={
-"Cardboard": ""
+"Cardboard": "",
+"ObjectData": ""
 }
 
 [application]
