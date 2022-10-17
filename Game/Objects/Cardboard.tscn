@@ -4,7 +4,7 @@
 [ext_resource path="res://Resources/Fonts/greek_classics/Greek_Classics.otf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 88
+size = 80
 use_filter = true
 extra_spacing_top = -16
 extra_spacing_bottom = -24
@@ -34,14 +34,15 @@ mouse_filter = 1
 [node name="Layout" type="VBoxContainer" parent="Bottom"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 4.0
-margin_right = -4.0
-margin_bottom = -4.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
 
 [node name="Name" type="RichTextLabel" parent="Bottom/Layout"]
-margin_right = 354.0
-margin_bottom = 162.0
+margin_top = 10.0
+margin_right = 346.0
+margin_bottom = 100.0
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 6
@@ -57,15 +58,16 @@ deselect_on_focus_loss_enabled = false
 
 [node name="Border" type="Line2D" parent="."]
 points = PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
-width = 16.0
-default_color = Color( 0, 1, 0.133333, 1 )
-begin_cap_mode = 1
-end_cap_mode = 1
+width = 18.0
+default_color = Color( 0.301961, 0.603922, 0.341176, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+antialiased = true
 
 [node name="Divide" type="Line2D" parent="."]
 position = Vector2( 0, 512 )
 points = PoolVector2Array( 0, 0, 0, 0 )
-width = 16.0
-default_color = Color( 0, 1, 0.133333, 1 )
+width = 18.0
+default_color = Color( 0.301961, 0.603922, 0.341176, 1 )
 joint_mode = 2
 begin_cap_mode = 2

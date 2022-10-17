@@ -2,7 +2,7 @@ extends Resource
 
 class_name ObjectData
 
-enum types {Item, Place, Power, Situation, Token}
+enum types {Item, Place, Power, Situation}
 
 export (types) var type
 

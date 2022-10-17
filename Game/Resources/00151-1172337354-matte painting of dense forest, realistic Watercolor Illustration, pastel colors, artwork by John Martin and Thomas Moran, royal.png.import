@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/00151-1172337354-matte painting of dense forest, realistic Watercolor Illustration, pastel colors, artwork by John Martin and Thomas Moran, royal.png-afa064c12798da9efff0b7a0065abf59.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Resources/00151-1172337354-matte painting of dense forest, realistic Watercolor Illustration, pastel colors, artwork by John Martin and Thomas Moran, royal.png"
+dest_files=[ "res://.import/00151-1172337354-matte painting of dense forest, realistic Watercolor Illustration, pastel colors, artwork by John Martin and Thomas Moran, royal.png-afa064c12798da9efff0b7a0065abf59.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

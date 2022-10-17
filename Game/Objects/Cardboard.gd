@@ -2,29 +2,32 @@ extends VBoxContainer
 
 class_name Cardboard
 
-var instanceData : ObjectData
+export var instanceData : Resource
+
+var type
+
 
 var mouseOffset = Vector2.ZERO #offset between mouse and this scene when mouse dragging happens
 
 func _ready():
 	set_physics_process(false)
+	load_object(instanceData)
+	
+	call_deferred("update_border")
+
+	
+
+func update_border():
 	$Border.points[1] = Vector2(0,rect_size.y)
 	$Border.points[2] = rect_size
 	$Border.points[3] = Vector2(rect_size.x,0)
 	$Divide.position.y = $Image.rect_size.y
 	$Divide.points[1] = Vector2(rect_size.x,0)
-	
 
 func load_object(data : ObjectData):
-	instanceData = data
 	$Image.texture = data.image
-	$Bottom/Layout/Name.text = data.name
-	if data.type == ObjectData.types.Token:
-		$Bottom.visible = false
-		$Border.visible = false
-		$Divide.visible = false
-	
-	pass
+	$Bottom/Layout/Name.bbcode_text = "[center]" + data.name
+	type = data.type
 
 func _gui_input(event):
 	if event.is_action_pressed("mouse_click"):
@@ -34,7 +37,7 @@ func _gui_input(event):
 
 func _physics_process(delta):
 	var desired_loc = get_global_mouse_position() - mouseOffset
-	rect_global_position = rect_global_position.move_toward(desired_loc,0.12*rect_global_position.distance_squared_to(desired_loc)*delta)
+	rect_global_position = rect_global_position.move_toward(desired_loc,0.2*rect_global_position.distance_squared_to(desired_loc)*delta)
 	#check if nodes below can take object data
 	pass
 

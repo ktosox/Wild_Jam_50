@@ -29,6 +29,10 @@ _global_script_class_icons={
 config/name="WildJam50"
 config/icon="res://icon.png"
 
+[autoload]
+
+GM="*res://GameManager.tscn"
+
 [display]
 
 window/size/width=1280
