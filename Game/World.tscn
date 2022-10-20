@@ -1,37 +1,34 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Objects/Cardboard.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/object_data.gd" type="Script" id=2]
 [ext_resource path="res://Resources/00019-150447684-matte painting of old manor, realistic Watercolor Illustration, lineart, artwork by Jozef Chelmonski and John Martin, gloomy, hi.png" type="Texture" id=3]
 [ext_resource path="res://Resources/00164-3137164651-matte painting of texture, realistic Watercolor Illustration, lineart, artwork by Jozef Chelmonski and John Martin, highly detai.png" type="Texture" id=4]
-[ext_resource path="res://Adventure/AdventureScreen.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Resource" id=2]
 script = ExtResource( 2 )
 type = 3
-name = "A Fog very dark very thick"
+name = "An usnually thick fog"
 image = ExtResource( 4 )
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
 type = 1
-name = "A house"
+name = "Thorton Manor"
 image = ExtResource( 3 )
 
 [node name="World" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 4, 4 )
+zoom = Vector2( 3, 3 )
 process_mode = 0
 
-[node name="AdventureScreen" parent="." instance=ExtResource( 5 )]
-
 [node name="Cardboard" parent="." instance=ExtResource( 1 )]
-margin_left = 2065.0
-margin_top = 1029.0
-margin_right = 2065.0
-margin_bottom = 1155.0
+margin_left = -674.0
+margin_top = 496.0
+margin_right = -98.0
+margin_bottom = 944.0
 instanceData = SubResource( 2 )
 
 [node name="Cardboard2" parent="." instance=ExtResource( 1 )]

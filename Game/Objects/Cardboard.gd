@@ -1,4 +1,4 @@
-extends VBoxContainer
+extends TextureRect
 
 class_name Cardboard
 
@@ -18,15 +18,15 @@ func _ready():
 	
 
 func update_border():
-	$Border.points[1] = Vector2(0,rect_size.y)
-	$Border.points[2] = rect_size
-	$Border.points[3] = Vector2(rect_size.x,0)
-	$Divide.position.y = $Image.rect_size.y
-	$Divide.points[1] = Vector2(rect_size.x,0)
+	$Border.points[1] = Vector2(-4,rect_size.y+4)
+	$Border.points[2] = rect_size + Vector2(4,4)
+	$Border.points[3] = Vector2(rect_size.x+4,-4)
+
+	$Divide.points[1] = Vector2(rect_size.x+4,0-4)
 
 func load_object(data : ObjectData):
-	$Image.texture = data.image
-	$Bottom/Layout/Name.bbcode_text = "[center]" + data.name
+	texture = data.image
+	$"%Name".bbcode_text = "[center]" + data.name
 	type = data.type
 
 func _gui_input(event):

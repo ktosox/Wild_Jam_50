@@ -1,48 +1,48 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Objects/Cardboard.gd" type="Script" id=1]
+[ext_resource path="res://Resources/00019-150447684-matte painting of old manor, realistic Watercolor Illustration, lineart, artwork by Jozef Chelmonski and John Martin, gloomy, hi.png" type="Texture" id=2]
 [ext_resource path="res://Resources/Fonts/greek_classics/Greek_Classics.otf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 80
+size = 88
+outline_size = 6
+outline_color = Color( 0.74902, 0.811765, 0.592157, 1 )
 use_filter = true
-extra_spacing_top = -16
-extra_spacing_bottom = -24
+extra_spacing_top = -8
+extra_spacing_bottom = 6
 extra_spacing_char = -1
 font_data = ExtResource( 3 )
 
-[node name="Cardboard" type="VBoxContainer"]
+[node name="Cardboard" type="TextureRect"]
 margin_right = 362.0
 margin_bottom = 447.0
-custom_constants/separation = 0
+mouse_filter = 0
+texture = ExtResource( 2 )
 script = ExtResource( 1 )
 
-[node name="Image" type="TextureRect" parent="."]
-margin_right = 362.0
-margin_bottom = 321.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-stretch_mode = 3
-
-[node name="Bottom" type="ColorRect" parent="."]
-margin_top = 321.0
-margin_right = 362.0
-margin_bottom = 447.0
-rect_min_size = Vector2( 0, 126 )
-mouse_filter = 1
-
-[node name="Layout" type="VBoxContainer" parent="Bottom"]
+[node name="Layout" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 8.0
-margin_top = 8.0
-margin_right = -8.0
-margin_bottom = -8.0
+margin_left = 6.0
+margin_right = -6.0
+custom_constants/separation = 0
 
-[node name="Name" type="RichTextLabel" parent="Bottom/Layout"]
-margin_top = 10.0
-margin_right = 346.0
-margin_bottom = 100.0
+[node name="Control" type="Control" parent="Layout"]
+margin_right = 564.0
+margin_bottom = 272.0
+mouse_filter = 1
+size_flags_vertical = 3
+
+[node name="Layout" type="VBoxContainer" parent="Layout"]
+margin_top = 272.0
+margin_right = 564.0
+margin_bottom = 448.0
+
+[node name="Name" type="RichTextLabel" parent="Layout/Layout"]
+unique_name_in_owner = true
+margin_right = 564.0
+margin_bottom = 176.0
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 6
@@ -57,14 +57,16 @@ scroll_active = false
 deselect_on_focus_loss_enabled = false
 
 [node name="Border" type="Line2D" parent="."]
+visible = false
 points = PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
 width = 18.0
-default_color = Color( 0.301961, 0.603922, 0.341176, 1 )
+default_color = Color( 0.301961, 0.603922, 0.341176, 0.356863 )
 joint_mode = 2
 begin_cap_mode = 2
 antialiased = true
 
 [node name="Divide" type="Line2D" parent="."]
+visible = false
 position = Vector2( 0, 512 )
 points = PoolVector2Array( 0, 0, 0, 0 )
 width = 18.0

@@ -9,19 +9,37 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "VBoxContainer",
+"base": "Resource",
+"class": "AdventureData",
+"language": "GDScript",
+"path": "res://Adventure/adventureData.gd"
+}, {
+"base": "TextureRect",
 "class": "Cardboard",
 "language": "GDScript",
 "path": "res://Objects/Cardboard.gd"
 }, {
 "base": "Resource",
+"class": "Chapter",
+"language": "GDScript",
+"path": "res://Adventure/chapter.gd"
+}, {
+"base": "Resource",
 "class": "ObjectData",
 "language": "GDScript",
 "path": "res://Objects/object_data.gd"
+}, {
+"base": "Resource",
+"class": "Page",
+"language": "GDScript",
+"path": "res://Adventure/page.gd"
 } ]
 _global_script_class_icons={
+"AdventureData": "",
 "Cardboard": "",
-"ObjectData": ""
+"Chapter": "",
+"ObjectData": "",
+"Page": ""
 }
 
 [application]
